@@ -23,6 +23,7 @@ import { ModalDetailCustomerComponent } from './components/modal-detail-customer
 import { ModalDetailEmployeeComponent } from './components/modal-detail-employee/modal-detail-employee.component';
 import { ModalConfirmacionComponent } from './components/modal-confirmacion/modal-confirmacion.component';
 import { ModalCreateAppointmentComponent } from './components/modal-create-appointment/modal-create-appointment.component';
+import { HomeQuestionsComponent } from './home-questions/home-questions.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ModalCreateAppointmentComponent } from './components/modal-create-appoi
     ModalDetailCustomerComponent,
     ModalDetailEmployeeComponent,
     ModalConfirmacionComponent,
-    ModalCreateAppointmentComponent
+    ModalCreateAppointmentComponent,
+    HomeQuestionsComponent
   ],
   imports: [
     BrowserModule,

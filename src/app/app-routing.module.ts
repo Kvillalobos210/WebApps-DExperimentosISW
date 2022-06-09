@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ViewCustomersComponent } from './components/view-customers/view-customers.component';
 import { ViewEmployeesComponent } from './components/view-employees/view-employees.component';
 import { AuthGuard } from './guards/auth.guard';
+import { HomeQuestionsComponent } from './home-questions/home-questions.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'home-employee', canActivate:[AuthGuard], component: HomeEmployeeComponent},
   {path: 'profile'      , canActivate:[AuthGuard], component: ProfileComponent},
   {path: 'customers'    , canActivate:[AuthGuard], component: ViewCustomersComponent},
-  {path: 'employees'    , canActivate:[AuthGuard], component: ViewEmployeesComponent}
+  {path: 'employees'    , canActivate:[AuthGuard], component: ViewEmployeesComponent},
+  {path: 'questions'    , canActivate:[AuthGuard], component: HomeQuestionsComponent}
 ];
 
 @NgModule({

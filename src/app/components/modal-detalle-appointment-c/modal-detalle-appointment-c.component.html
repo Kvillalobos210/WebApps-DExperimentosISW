@@ -1,61 +1,61 @@
 <div class="contenedor">
     <div class="header">
-        <h1>Cita N°: {{data.id}}</h1>
+        <h1>Detalles Appointment ID: {{data.id}}</h1>
     </div>
     <div class="appointment-details">
         <div class="subtitle-appointment">
-            <h2>Detalles de la cita</h2>
+            <h2>Appointment Details</h2>
         </div>
         <div class="appointment-content">
             <div>
-                <h3 class="atributes">Dirección</h3>
+                <h3 class="atributes">Address</h3>
                 <h4>{{data.address}}</h4>
             </div>
     
             <div>
-                <h3 class="atributes">Fecha de la cita</h3>
+                <h3 class="atributes">Appointment Date</h3>
                 <h4>{{data.appointmentDate}}</h4>
             </div>
     
             <div>
-                <h3 class="atributes">Descripción</h3>
+                <h3 class="atributes">Description</h3>
                 <h4>{{data.description}}</h4>
             </div>
     
             <div>
-                <h3 class="atributes">Estado</h3>
+                <h3 class="atributes">Status</h3>
                 <h4>{{data.status}}</h4>
             </div>
     
             <div>
-                <h3 class="atributes">Método de pago</h3>
+                <h3 class="atributes">Payment Method</h3>
                 <h4>{{data.paymentMethod.paymentMethod}}</h4>
             </div>
         </div>
     </div>
     <div class="customer-details">
         <div class="subtitle-customer">
-            <h2>Detalles del empleado</h2>
+            <h2>Employee Details</h2>
         </div>
 
         <div class="customer-content">
             <div>
-                <h3 class="atributes">Nombre</h3>
+                <h3 class="atributes">Firstname</h3>
                 <h4>{{data.employee.firstName}}</h4>
             </div>
     
             <div>
-                <h3 class="atributes">Apellido</h3>
+                <h3 class="atributes">Lastname</h3>
                 <h4>{{data.employee.lastName}}</h4>
             </div>
 
             <div>
-                <h3 class="atributes">Especialidad</h3>
+                <h3 class="atributes">Specialty</h3>
                 <h4>{{data.employee.specialty.name}}</h4>
             </div>
 
             <div>
-                <h3 class="atributes">Correo</h3>
+                <h3 class="atributes">Email</h3>
                 <h4>{{data.employee.email}}</h4>
             </div>
 
@@ -65,17 +65,17 @@
             </div>
 
             <div>
-                <h3 class="atributes">Número de celular</h3>
+                <h3 class="atributes">Cellphone</h3>
                 <h4>{{data.employee.cellphone}}</h4>
             </div>
 
             <div>
-                <h3 class="atributes">Distrito</h3>
+                <h3 class="atributes">City</h3>
                 <h4>{{data.employee.district.city.name}}</h4>
             </div>
 
             <div>
-                <h3 class="atributes">Ciudad</h3>
+                <h3 class="atributes">City</h3>
                 <h4>{{data.employee.district.name}}</h4>
             </div>
 
@@ -87,29 +87,7 @@
     <div class="contener">
         <div class="row">
             <div class="c-md-12 title">
-                <h2>Contáctate conmigo</h2>
-                <hr>
-            </div>
-            <div class="c-md-12"> 
-                <div class="share">
-                    <!--
-                    <a href="https://api.whatsapp.com/send?phone={{data.employee.cellphone}}" target="_blank" title="Habla conmigo por Whatsapp" class="whatsapp">Whatsapp</a>
-                    <a href="https://t.me/+51{{data.employee.cellphone}}" target="_blank" title="Habla conmigo por Telegram" class="telegram">Telegram</a>
-                    -->
-                    
-                </div>
-                
-            </div>
-            <!--<a href="https://api.whatsapp.com/send?phone={{data.employee.cellphone}}" target="_blank"><img loading="lazy" alt="Habla conmigo por WhatsApp" height="60" width="70" src=" https://1.bp.blogspot.com/-Vc_W7xraNnc/YPhkfwQExQI/AAAAAAAAA1c/dI72v37UC0EGJd7jWvKWYD3WMwZ7eER7gCPcBGAYYCw/s0/whatsapp-icono.png" title="Habla conmigo por WhatsApp"/></a>-->
-            <a href="https://api.whatsapp.com/send?phone={{data.employee.cellphone}}" target="_blank"><img loading="lazy" alt="WhatsApp" height="60" width="70" src="https://i0.wp.com/tecnowasap.com/wp-content/uploads/2021/11/icono-whatsapp-aesthetic.png?resize=400%2C402&ssl=1" title="WhatsApp"/></a>
-            <a>&nbsp;&nbsp;</a>
-            <!--<a href="https://t.me/+51{{data.employee.cellphone}}" target="_blank"><img loading="lazy" alt="Habla conmigo por Telegram" height="60" width="70" src="https://1.bp.blogspot.com/-VdnsMeLmEgU/YP9u1GE7FBI/AAAAAAAAA14/u2ffvxYPotYGoAXY6sKmPCnRVZu2uOS7ACPcBGAYYCw/s64/telegram.icono.png" title="Habla conmigo por Telegram"/></a>-->        
-            <a href="https://t.me/+51{{data.employee.cellphone}}" target="_blank"><img loading="lazy" alt="Telegram" height="60" width="70" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TlIVtcn4eNWASQdSywDRltuAtwPem98Wwdij8Bwourni6qCwYGBETQ1rFdaxQXRmhMc&usqp=CAU" title="Telegram"/></a>
-        </div>
-
-        <div class="row">
-            <div class="c-md-12 title">
-                <h2>Si tienes una duda adicional, puedes contactarte conmigo por videollamada</h2>
+                <h1>Contáctate conmigo</h1>
                 <hr>
             </div>
             <div class="c-md-12">
@@ -120,9 +98,11 @@
                     -->
                     
                 </div>
+                
             </div>
-            <!--<a href="https://api.whatsapp.com/send?phone={{data.employee.cellphone}}" target="_blank"><img loading="lazy" alt="Habla conmigo por WhatsApp" height="60" width="70" src=" https://1.bp.blogspot.com/-Vc_W7xraNnc/YPhkfwQExQI/AAAAAAAAA1c/dI72v37UC0EGJd7jWvKWYD3WMwZ7eER7gCPcBGAYYCw/s0/whatsapp-icono.png" title="Habla conmigo por WhatsApp"/></a>-->
-            <a href="https://meet.google.com/new" target="_blank"><img loading="lazy" alt="Meets" height="60" width="70" src="https://img.icons8.com/plasticine/400/google-meet.png" title="Meets"/></a>
+            <a href="https://api.whatsapp.com/send?phone={{data.employee.cellphone}}" target="_blank"><img loading="lazy" alt="Habla conmigo por WhatsApp" height="60" width="70" src=" https://1.bp.blogspot.com/-Vc_W7xraNnc/YPhkfwQExQI/AAAAAAAAA1c/dI72v37UC0EGJd7jWvKWYD3WMwZ7eER7gCPcBGAYYCw/s0/whatsapp-icono.png" title="Habla conmigo por WhatsApp"/></a>
+            <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="https://t.me/+51{{data.employee.cellphone}}" target="_blank"><img loading="lazy" alt="Habla conmigo por Telegram" height="60" width="70" src="https://1.bp.blogspot.com/-VdnsMeLmEgU/YP9u1GE7FBI/AAAAAAAAA14/u2ffvxYPotYGoAXY6sKmPCnRVZu2uOS7ACPcBGAYYCw/s64/telegram.icono.png" title="Habla conmigo por Telegram"/></a>
         </div>
     </div>
 

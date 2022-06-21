@@ -7,11 +7,12 @@
           
 
           <div routerLinkActive="active" *ngIf="metadata">
-            <a mat-button  (click)="toHomePage()">Home</a>
-            <a mat-button  [routerLink]="'/customers'" *ngIf="metadata.userType == 2">Customers</a>
-            <a mat-button  [routerLink]="'/employees'" *ngIf="metadata.userType == 1">Employees</a>
-            <a mat-button  [routerLink]="'/profile'">Profile</a>
-            <a mat-button  [routerLink]="'/questions'"> Frequent Questions</a>
+            <a mat-button  (click)="toHomePage()">Inicio</a>
+            <a mat-button  [routerLink]="'/customers'" *ngIf="metadata.userType == 2">Clientes</a>
+            <a mat-button  [routerLink]="'/employees'" *ngIf="metadata.userType == 1">Técnicos Especialistas</a>
+            <a mat-button  [routerLink]="'/profile'">Perfil</a>
+            <a mat-button  [routerLink]="'/questions'"> Preguntas frecuentes</a>
+            <a mat-button  [routerLink]="'/recommendations'"> Recomendaciones</a>
         
           </div>
           <span class="flex-expand"></span>

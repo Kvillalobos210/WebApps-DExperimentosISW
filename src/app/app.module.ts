@@ -24,6 +24,7 @@ import { ModalDetailEmployeeComponent } from './components/modal-detail-employee
 import { ModalConfirmacionComponent } from './components/modal-confirmacion/modal-confirmacion.component';
 import { ModalCreateAppointmentComponent } from './components/modal-create-appointment/modal-create-appointment.component';
 import { HomeQuestionsComponent } from './home-questions/home-questions.component';
+import { HomeRecommendationsComponent } from './home-recommendations/home-recommendations.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { HomeQuestionsComponent } from './home-questions/home-questions.componen
     ModalDetailEmployeeComponent,
     ModalConfirmacionComponent,
     ModalCreateAppointmentComponent,
-    HomeQuestionsComponent
+    HomeQuestionsComponent,
+    HomeRecommendationsComponent
   ],
   imports: [
     BrowserModule,

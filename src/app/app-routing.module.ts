@@ -10,6 +10,7 @@ import { ViewCustomersComponent } from './components/view-customers/view-custome
 import { ViewEmployeesComponent } from './components/view-employees/view-employees.component';
 import { AuthGuard } from './guards/auth.guard';
 import { HomeQuestionsComponent } from './home-questions/home-questions.component';
+import { HomeRecommendationsComponent } from './home-recommendations/home-recommendations.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'profile'      , canActivate:[AuthGuard], component: ProfileComponent},
   {path: 'customers'    , canActivate:[AuthGuard], component: ViewCustomersComponent},
   {path: 'employees'    , canActivate:[AuthGuard], component: ViewEmployeesComponent},
-  {path: 'questions'    , canActivate:[AuthGuard], component: HomeQuestionsComponent}
+  {path: 'questions'    , canActivate:[AuthGuard], component: HomeQuestionsComponent},
+  {path: 'recommendations'    , canActivate:[AuthGuard], component: HomeRecommendationsComponent}
 ];
 
 @NgModule({

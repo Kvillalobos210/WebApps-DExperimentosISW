@@ -7,24 +7,24 @@
         <form class="formulario" [formGroup]="appointmentForm">
     
             <mat-form-field appearance="fill">
-                <mat-label>Address</mat-label>
+                <mat-label>Dirección</mat-label>
                 <input matInput placeholder="Ingresa la direccion de la cita" formControlName="address">
             </mat-form-field>
 
             <mat-form-field appearance="fill">
-                <mat-label>Appointmet Date</mat-label>
+                <mat-label>Día de la cita</mat-label>
                 <input matInput [matDatepicker]="picker2" formControlName="appointmentDate" [min]="TODAY_DATE">
                 <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                 <mat-datepicker #picker2></mat-datepicker>
             </mat-form-field>
 
             <mat-form-field appearance="fill">
-                <mat-label>Description</mat-label>
+                <mat-label>Descripción</mat-label>
                 <input  matInput placeholder="Ingresa una descripcion" formControlName="description">
             </mat-form-field>
 
             <mat-form-field appearance="fill">
-                <mat-label>Payment Method</mat-label>
+                <mat-label>Método de pago</mat-label>
                 <mat-select formControlName="paymentMethod">
                   <mat-option *ngFor="let pms of listPMethods" [value]="pms.id">
                     {{pms.paymentMethod}}

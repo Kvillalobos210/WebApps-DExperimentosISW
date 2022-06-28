@@ -8,5 +8,6 @@ export interface Employee {
     id_account?  : number,
     id_specialty : number,
     city         : string,
-    district     : string 
+    district     : string,
+    birthday     : string
 }

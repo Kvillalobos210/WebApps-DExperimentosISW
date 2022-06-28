@@ -8,15 +8,12 @@ import { Observable} from 'rxjs';
 })
 export class EmployeeService {
 
-  // URL:string = environment.URL + '/api/employees';
-  //private baseURL = 'http://localhost:8080/api/employees';
-  
+  private baseURL2 = 'http://localhost:8081/api/employees';
+
   private baseURL='https://appdhome.herokuapp.com/api/employees';
 
-
   constructor(private http: HttpClient) { }
- 
-  
+
   getAllEmployees(): Observable<any>{
     return this.http.get(`${this.baseURL}`);
   }
@@ -31,6 +28,10 @@ export class EmployeeService {
 
   getEmployeeByIdAccount(idAccount): Observable<any> {
     return this.http.get(`${this.baseURL}/searchByIdAccount/${idAccount}`);
+  }
+
+  getEmployeesByGender(gender): Observable<any> {
+    return this.http.get(`${this.baseURL2}/searchByGender/${gender}`);
   }
 
   validateEmail(employee): Observable<any> {

@@ -10,6 +10,10 @@ import { SpecialtyService } from '../../services/specialty.service';
 import { CityService } from '../../services/city.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+interface Gender {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-register',
@@ -26,7 +30,6 @@ export class RegisterComponent implements OnInit {
   ID_CITY: number;
   ID_DISTRICT: number;
   ID_SPECIALTY: number;
-
   ACCOUNT: any;
   customerNew: any;
   employeeNew: any;
@@ -35,6 +38,10 @@ export class RegisterComponent implements OnInit {
   registerForm2: FormGroup;
   registerForm3: FormGroup;
   firstData: boolean = true;
+  genders: Gender[] = [
+    {value: 'femenino', viewValue: 'Femenino'},
+    {value: 'masculino', viewValue: 'Masculino'},
+  ];
   constructor(private _formBuilder : FormBuilder,
               private router: Router,
               private authService: AuthService,
@@ -64,7 +71,7 @@ export class RegisterComponent implements OnInit {
       usuario: ['', [Validators.required, Validators.pattern(pattern)]],
       password: ['', [Validators.required, Validators.minLength(4)]],
       typeuser: [null, [Validators.required]]
-    }) 
+    })
     form.valueChanges.subscribe(()=>{
     });
     return form;
@@ -86,7 +93,7 @@ export class RegisterComponent implements OnInit {
       cellphone: ['', [Validators.required]],
       city: [null, [Validators.required]],
       district: [null, [Validators.required]],
-    }) 
+    })
     form.valueChanges.subscribe(()=>{
     });
     return form;
@@ -108,11 +115,12 @@ export class RegisterComponent implements OnInit {
       lastname: ['', [Validators.required]],
       dni: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
+      gender: ['', [Validators.required]],
       specialty: ['', [Validators.required]],
       cellphone: ['', [Validators.required]],
       city: [null, [Validators.required]],
       district: [null, [Validators.required]]
-    }) 
+    })
     form.valueChanges.subscribe(()=>{
     });
     return form;
@@ -125,8 +133,8 @@ export class RegisterComponent implements OnInit {
   get cellphoneE() { return this.registerForm3.controls['cellphone']; }
   get cityE() { return this.registerForm3.controls['city']; }
   get districtE() { return this.registerForm3.controls['district']; }
-  get specialtyE() { return this.registerForm3.controls['specialty']; }
-    
+  get gender() { return this.registerForm3.controls['gender']; }
+
 
   validarDatos(stepper: MatStepper){
     this.account.username = this.usuario.value;
@@ -147,11 +155,11 @@ export class RegisterComponent implements OnInit {
         stepper.next();
       }
       else{
-        
+
         this._snackBar.open(res.msj, 'Cerrar', {duration:4000, horizontalPosition:'start'})
       }
     })
-    
+
   }
 
   selectCity(event){
@@ -178,12 +186,12 @@ export class RegisterComponent implements OnInit {
         dni: this.dniC.value,
         email: this.emailC.value,
         firstName: this.firstnameC.value,
-        lastName: this.lastnameC.value        
+        lastName: this.lastnameC.value
       }
       this.customerService.validateEmail(this.customerNew).subscribe(res=>{
-        if(!res || !res.msj){ 
+        if(!res || !res.msj){
           stepper.next()
-        } else{ 
+        } else{
           this._snackBar.open(res.msj, 'Cerrar', {duration:4000, horizontalPosition: 'start'});
         }
       })
@@ -194,7 +202,7 @@ export class RegisterComponent implements OnInit {
         account: {
           id: this.ID_CREATED,
         },
-        birthday: new Date(),
+        birthday: this.gender.value,
         cellphone: this.cellphoneE.value,
         district: {
           city: {
